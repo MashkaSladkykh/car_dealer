@@ -26,9 +26,11 @@ export const Selector = ({ text, list, handleChange }) => {
                 key={index}
                 className="px-4 py-2 hover:bg-gray-100 cursor-pointer transition"
                 onClick={() => {
-                  el.MakeId ? handleChange(el.MakeId, el.MakeName) : handleChange(el);
+                  el.MakeId
+                    ? handleChange(el.MakeId, el.MakeName)
+                    : handleChange(el);
                   handleOpenList();
-                  el.MakeName ? setSelectedEl(el.MakeName) : setSelectedEl(el)
+                  el.MakeName ? setSelectedEl(el.MakeName) : setSelectedEl(el);
                 }}
               >
                 {el.MakeName ? el.MakeName : el}
