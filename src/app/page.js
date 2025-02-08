@@ -47,16 +47,19 @@ export default function Home() {
                 handleChange={handleSetYear}
               />
             </div>
-            {makeId && year && (
-              <Navigator
-                link={`/result/${makeId}/${year}`}
-                text="Next"
-                img="/next.svg"
-                alt="next"
-                imgHeight={13}
-                imgWidth={20}
-              />
-            )}
+            <Navigator
+              link={`/result/${makeId}/${year}`}
+              text="Next"
+              img="/next.svg"
+              alt="next"
+              imgHeight={13}
+              imgWidth={20}
+              className={
+                makeId && year
+                  ? ""
+                  : "pointer-events-none text-gray-400 border-gray-400"
+              }
+            />
           </section>
         </main>
       </div>
